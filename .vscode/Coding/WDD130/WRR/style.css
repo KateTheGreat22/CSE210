@@ -1,0 +1,15 @@
+body {
+  background-color: rgb(140, 202, 223);
+}
+
+img.logo{
+    height: 200px;
+    width: 400px
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-weight: 300;
+    font-size: large;
+}
