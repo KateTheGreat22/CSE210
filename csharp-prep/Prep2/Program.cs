@@ -30,7 +30,7 @@ class Program
         {
             grade = "F";
         }
-        Console.WriteLine($" Your grade is: {grade}.");
+        Console.WriteLine($" Your grade is: {grade}");
 
         if (percent >= 70)
         {
