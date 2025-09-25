@@ -4,41 +4,56 @@ class Program
 {
     static void Main(string[] args)
     {
-        DisplayMessage();
-        DisplayName();
-        DisplayNumber();
-        DisplayYear();
+        DisplayWelcome();
 
-        void DisplayMessage()
-        {
-            Console.WriteLine("Welcome to the Program!");
-        }
+        string name = PromptUserName();
+        int number = PromptUserNumber();
 
-        Console.Write("What is your name?");
-        string name = Console.ReadLine();
+        PromtUserBirthYear(out int birthYear);
 
-        void DisplayName(string name)
-        {
-            Console.WriteLine($"Welcome {name}!");
-        }
+        int square = SquareNumber(number);
 
-        Console.Write("What is your favorite number?");
-        string number = Console.ReadLine();
-        int numbers = int.Parse(number);
+        DisplayResult(name, square, birthYear);
+    }
 
-        void DisplayNumber(int numbers)
-        {
-            Console.WriteLine($"Welcome {name}!");
-        }
+    static void DisplayWelcome()
+    {
+        Console.WriteLine("Welcome to the Program!");
+    }
 
-        Console.Write("What year were you born?");
-        int year = Console.ReadLine();
-        int years = int.Parse(year);
+    static string PromptUserName()
+    {
+        Console.Write("What is your name? ");
+        return Console.ReadLine();
+    }
 
-        void DisplayYear(int years)
-        {
-            Console.WriteLine($"Welcome {name}!");
-        }
+    static int PromptUserNumber()
+    {
+        Console.Write("What is your favorite number? ");
+        string input = Console.ReadLine();
+        return int.Parse(input);
+    }
 
+    static void PromtUserBirthYear(out int birthYear)
+    {
+        Console.Write("What year were you born? ");
+        string input = Console.ReadLine();
+        birthYear = int.Parse(input);
+    }
+
+    static int SquareNumber(int number)
+    {
+        return number * number;
+    }
+
+    static void DisplayResult(string name, int square, int birthYear)
+    {
+        int currentYear = DateTime.Now.Year;
+        int age = currentYear - birthYear;
+
+        Console.WriteLine(" Information Summary Because I Like To Keep Code Clean");
+        Console.WriteLine($"Welcome {name}!");
+        Console.WriteLine($"{name}, your number squared is {square}");
+        Console.WriteLine($"{name}, You are {age} years old this year.");
     }
 }
