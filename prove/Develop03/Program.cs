@@ -27,7 +27,6 @@ class Program
             }
         }
 
-        // Display one final time to show all words hidden
         if (response != "quit")
         {
             Console.Clear();
