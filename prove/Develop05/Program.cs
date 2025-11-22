@@ -7,6 +7,7 @@ using System;
  * 2. Clear display of bonus points when checklist goals are fully completed
  * 3. Immediate point total updates after each goal is recorded
  * 4. User-friendly menu system with clear prompts
+ * 5. Makes it so that you can select both a number or eternal/simple/checklist as an option
  */
 
 class Program
@@ -64,4 +65,5 @@ class Program
             }
         }
     }
+
 }
